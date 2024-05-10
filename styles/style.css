@@ -1,0 +1,16 @@
+body {
+	font-family: Consolas, sans-serif;
+	font-size: 20px;
+}
+.container {
+	max-width: 800px;
+	margin: 0 auto;
+}
+.map_container {
+	max-width: 1632px;
+}
+img {
+	width: 100%;
+	max-width: 100%;
+	height: auto;
+}

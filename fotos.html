@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+				content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="styles/swiper-bundle.min.css" />
+	<link rel="stylesheet" href="styles/style.css">
+	<title>Фотографии</title>
+
+	<style>
+		html,
+		body {
+			position: relative;
+			height: 100%;
+		}
+		.swiper-slide {
+			text-align: center;
+			font-size: 18px;
+			background: #fff;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			background-size: cover;
+			background-position: center;
+		}
+
+		.swiper-slide img {
+			display: block;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+
+		.swiper {
+			width: 70%;
+			height: 300px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+		.mySwiper2 {
+			height: 80%;
+			width: 70%;
+		}
+
+		.mySwiper {
+			height: 20%;
+			box-sizing: border-box;
+			padding: 10px 0;
+		}
+
+		.mySwiper .swiper-slide {
+			width: 25%;
+			height: 100%;
+			opacity: 0.4;
+		}
+
+		.mySwiper .swiper-slide-thumb-active {
+			opacity: 1;
+		}
+
+		.swiper-slide img {
+			display: block;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	</style>
+</head>
+
+<body>
+<div class="container">
+	<a href="main.html">На главную</a>
+	<h1>Фотографии</h1>
+	<div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper mySwiper2">
+		<div class="swiper-wrapper">
+			<div class="swiper-slide">
+				<a href="foto-1.html">
+					<img src="images/nature-1.jpg" />
+				</a>
+			</div>
+			<div class="swiper-slide">
+				<a href="foto-2.html">
+					<img src="images/nature-2.jpg" />
+				</a>
+			</div>
+			<div class="swiper-slide">
+				<a href="foto-3.html">
+					<img src="images/nature-3.jpg" />
+				</a>
+			</div>
+			<div class="swiper-slide">
+				<a href="foto-4.html">
+					<img src="images/nature-4.jpg" />
+				</a>
+			</div>
+			<div class="swiper-slide">
+				<a href="foto-5.html">
+					<img src="images/nature-5.jpg" />
+				</a>
+			</div>
+			<div class="swiper-slide">
+				<a href="foto-6.html">
+					<img src="images/nature-6.jpg" />
+				</a>
+			</div>
+			<div class="swiper-slide">
+				<a href="foto-7.html">
+					<img src="images/nature-7.jpg" />
+				</a>
+			</div>
+			<div class="swiper-slide">
+				<a href="foto-8.html">
+					<img src="images/nature-8.jpg" />
+				</a>
+			</div>
+			<div class="swiper-slide">
+				<a href="foto-9.html">
+					<img src="images/nature-9.jpg" />
+				</a>
+			</div>
+		</div>
+		<div class="swiper-button-next"></div>
+		<div class="swiper-button-prev"></div>
+	</div>
+	<div thumbsSlider="" class="swiper mySwiper">
+		<div class="swiper-wrapper">
+			<div class="swiper-slide">
+				<img src="images/nature-1.jpg" />
+			</div>
+			<div class="swiper-slide">
+				<img src="images/nature-2.jpg" />
+			</div>
+			<div class="swiper-slide">
+				<img src="images/nature-3.jpg" />
+			</div>
+			<div class="swiper-slide">
+				<img src="images/nature-4.jpg" />
+			</div>
+			<div class="swiper-slide">
+				<img src="images/nature-5.jpg" />
+			</div>
+			<div class="swiper-slide">
+				<img src="images/nature-6.jpg" />
+			</div>
+			<div class="swiper-slide">
+				<img src="images/nature-7.jpg" />
+			</div>
+			<div class="swiper-slide">
+				<img src="images/nature-8.jpg" />
+			</div>
+			<div class="swiper-slide">
+				<img src="images/nature-9.jpg" />
+			</div>
+		</div>
+	</div>
+</div>
+
+<script src="js/swiper-bundle.min.js"></script>
+
+<!-- Initialize Swiper -->
+<script>
+	let swiper = new Swiper(".mySwiper", {
+		loop: true,
+		spaceBetween: 10,
+		slidesPerView: 4,
+		freeMode: true,
+		watchSlidesProgress: true,
+		autoplay: {
+			delay: 2000,
+			disableOnInteraction: false,
+		},
+	});
+	let swiper2 = new Swiper(".mySwiper2", {
+		loop: true,
+		spaceBetween: 10,
+		navigation: {
+			nextEl: ".swiper-button-next",
+			prevEl: ".swiper-button-prev",
+		},
+		autoplay: {
+			delay: 2000,
+			disableOnInteraction: false,
+		},
+		thumbs: {
+			swiper: swiper,
+		},
+	});
+</script>
+</body>
+
+</html>
